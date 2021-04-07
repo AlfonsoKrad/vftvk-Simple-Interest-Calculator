@@ -1,4 +1,10 @@
-body {background-color:tan;}
-h1{color:green;}
+body {background-color:black;}
+h1{color:grey;font-weight: bold;}
+.maindiv {background: white; width: 500px; padding: 20px; border-radius: 25px; margin: auto;}
+.maindiv footer, td{text-align: left;}
+.maindiv table{margin: auto;}
+
+.labels {width: 120px;}
+.values {width: 200px;}
 
 

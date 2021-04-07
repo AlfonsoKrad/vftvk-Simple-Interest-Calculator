@@ -1,16 +1,61 @@
+<!DOCTYPE html>
+
 <html>
     <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+        <!--Include Script source and title-->
+        <title>Web App - Simple Interest Calculator</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <div class="maindiv">
+        <!-- Main Div - Adding Tables and Labes with their values -->
         <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
-    </body>
+        <table>
+            <colgroup>
+                <col span="1" class="labels">
+                <col span="1" class="values">
+            </colgroup>
+            <tr>
+                <td>Amount</td>
+                <td><input type="number"  id="principal"><br/></td>
+            </tr>
+            <tr>
+                <td>Interes Rate</td>
+                <td><input type="range" id="rate" name="rate" min="1" max="20" step="0.25" value="10.25" onchange="currentRangeValue()">
+                    <span id="rateValue">10.25%</span><br/>
+                </td>
+            </tr>
+            <tr>
+                <td>No. of Years</td>
+                <td>
+                    <!-- Create dropdown selector -->
+                    <select name="years" id="years">
+                        <option value = "1">1</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5</option>
+                        <option value = "6">6</option>
+                        <option value = "7">7</option>
+                        <option value = "8">8</option>
+                        <option value = "9">9</option>
+                        <option value = "10">10</option>
+                    </select>
+                </td>
+                <br/>
+            </tr>
+            <tr>
+                <!-- When the button is clicled the compute value is called -->
+                <td><button onclick="compute()">Compute Interest</button></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <span id = "result"></span>
+                </td>
+            </tr>
+        </table>
+        <!-- Footer Section-->
+        <br>
+        <footer>© Everyone Can Get Rich</footer>
+    </div>
 </html>
